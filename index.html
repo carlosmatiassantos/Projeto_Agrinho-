@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Agrinho: Agricultura Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Diagnóstico Agrinho: Agricultura Sustentável</h1>
+            <p>Avalie as práticas da sua propriedade rural e descubra como ser mais ecoeficiente!</p>
+        </header>
+
+        <main>
+            <form id="quiz-sustentavel">
+                <div class="question">
+                    <label for="agua">1. Qual tipo de irrigação é predominantemente utilizado?</label>
+                    <select id="agua" required>
+                        <option value="">Selecione...</option>
+                        <option value="3">Gotejamento (Alta eficiência)</option>
+                        <option value="2">Aspersão Comum (Média eficiência)</option>
+                        <option value="1">Inundação/Sulcos (Baixa eficiência)</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="solo">2. Como é feito o manejo e conservação do solo?</label>
+                    <select id="solo" required>
+                        <option value="">Selecione...</option>
+                        <option value="3">Plantio Direto e Rotação de Culturas</option>
+                        <option value="2">Apenas Rotação de Culturas</option>
+                        <option value="1">Arado convencional sem cobertura</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="defensivos">3. Qual a principal estratégia contra pragas?</label>
+                    <select id="defensivos" required>
+                        <option value="">Selecione...</option>
+                        <option value="3">Manejo Integrado de Pragas (MIP) e Biológicos</option>
+                        <option value="2">Uso controlado de defensivos químicos</option>
+                        <option value="1">Uso calendarizado (aplica sem monitorar antes)</option>
+                    </select>
+                </div>
+
+                <div class="question">
+                    <label for="energia">4. A propriedade utiliza alguma fonte de energia renovável?</label>
+                    <select id="energia" required>
+                        <option value="">Selecione...</option>
+                        <option value="3">Sim (Solar, Eólica ou Biomassa)</option>
+                        <option value="1">Não, apenas rede elétrica convencional / gerador diesel</option>
+                    </select>
+                </div>
+
+                <button type="button" onclick="calcularSustentabilidade()">Calcular Pontuação</button>
+            </form>
+
+            <div id="resultado" class="hidden">
+                <h2>Seu Resultado: <span id="nota-final">0</span>/12 pontos</h2>
+                <p id="feedback-texto"></p>
+                <div class="dicas">
+                    <h3>🌱 Dicas de Sustentabilidade:</h3>
+                    <ul id="lista-dicas"></ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
